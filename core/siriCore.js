@@ -2,11 +2,12 @@ function SiriCore(config,client){
   this.stream = null;
   this.isHard = false;
   this.trends = {};
+  this.config = config;
 
   this.start = function(status){
     this.isHard = status === 'HARD';
     this.client = client;
-    this.stream = client.stream('statuses/filter', {track: '#lka'});
+    this.stream = client.stream('statuses/filter', {track: config.core.track});
     this.stream.on('data',this.onData.bind(this));
     this.stream.on('error', this.onError.bind(this));
   }
