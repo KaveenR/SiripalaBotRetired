@@ -1,0 +1,15 @@
+var config = {
+  run_status: 'SOFT',
+  consumer_key: '',
+  consumer_secret: '',
+  access_token_key: '',
+  access_token_secret: '',
+  database : {
+    name : ""
+  },
+  core : {
+      track : ''
+    }
+};
+
+module.exports = config;
